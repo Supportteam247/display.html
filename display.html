@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Data</title>
+    <script>
+        window.onload = function() {
+            const params = new URLSearchParams(window.location.search);
+
+            // Retrieve data from the URL parameters
+            const name = params.get('name');
+            const email = params.get('email');
+            const message = params.get('message');
+
+            // Display the data
+            document.getElementById("displayName").innerText = name;
+            document.getElementById("displayEmail").innerText = email;
+            document.getElementById("displayMessage").innerText = message;
+        }
+    </script>
+</head>
+<body>
+    <h2>Stored Submission Details</h2>
+    <p><strong>Name:</strong> <span id="displayName"></span></p>
+    <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+    <p><strong>Message:</strong> <span id="displayMessage"></span></p>
+</body>
+</html>
